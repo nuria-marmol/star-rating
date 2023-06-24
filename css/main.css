@@ -1,0 +1,47 @@
+.star-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+input[type="radio"] {
+  margin: unset;
+  opacity: 0;
+  transform: scale(3.5);
+}
+
+/* Showing all yellow stars when hovering over wrapper */
+/* JS .stars-group:hover > img:last-child {
+  opacity: 1;
+}*/
+
+/* Not showing next yellow stars */
+/* JS input[type="radio"]:hover ~ label > .stars-group > img:last-child {
+  opacity: 0;
+}*/
+
+input[type="radio"]:checked ~ label > .stars-group > img:last-child {
+  opacity: 0;
+}
+
+label {
+  transform: translateX(70%);
+}
+
+.stars-group {
+  /* For putting yellow stars on top of grey ones later */
+  position: relative;
+  display: flex;
+  /* Just leaving some space to the right */
+  margin: 0 .5rem 0 0;
+}
+
+.stars-group > img {
+  width: 3rem;
+}
+
+/* Yellow stars */
+.stars-group > img:last-child {
+  position: absolute;
+}
