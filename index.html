@@ -6,47 +6,49 @@
     <title>Star rating</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-    <!-- Cuando se haga hover en el grupo, se volverán amarillas.
-    Pero, le diremos que al hover, los hermanos del input seguirán siendo grisecitos. Lo mismo con el checked. -->
-    <div class="star-rating">
-        <label for="star0" class="stars-group"></label>     
-        <input type="radio" checked name="star" value="0" id="star0">
-        <label for="star1">
-            <figure class="stars-group">                                  
-                <img src="icons/grey-star.svg" alt="Star">   
-                <img src="icons/yellow-star.svg" alt="Star"> 
-            </figure> 
-        </label>
-        <input type="radio" name="star" value="1" id="star1">        
-        <label for="star2">
-            <figure class="stars-group">                               
-                <img src="icons/grey-star.svg" alt="Star"> 
-                <img src="icons/yellow-star.svg" alt="Star">          
-            </figure>            
-        </label>
-        <input type="radio" name="star" value="2" id="star2">        
-        <label for="star3">
-            <figure class="stars-group">                              
-                <img src="icons/grey-star.svg" alt="Star">
-                <img src="icons/yellow-star.svg" alt="Star">           
-            </figure>
-        </label>
-        <input type="radio" name="star" value="3" id="star3">        
-        <label for="star4">
-            <figure class="stars-group">                              
-                <img src="icons/grey-star.svg" alt="Star">  
-                <img src="icons/yellow-star.svg" alt="Star">         
-            </figure>
-        </label>
-        <input type="radio" name="star" value="4" id="star4">        
-        <label for="star5">
-            <figure class="stars-group">                               
-                <img src="icons/grey-star.svg" alt="Star"> 
-                <img src="icons/yellow-star.svg" alt="Star">         
-            </figure>
-        </label>   
-        <input type="radio" name="star" value="5" id="star5">
+<body>    
+    <div class="rating-card">
+        <h1>How many stars would you give to your code editor?</h1>
+        <div class="star-rating">
+            <label for="star0" class="stars-group"></label>     
+            <input type="radio" checked name="star" value="0" id="star0">
+            <label for="star1">
+                <figure class="stars-group">                                  
+                    <img src="icons/grey-star.svg" alt="Star">   
+                    <img src="icons/yellow-star.svg" alt="Star"> 
+                </figure> 
+            </label>
+            <input type="radio" name="star" value="1" id="star1">        
+            <label for="star2">
+                <figure class="stars-group">                               
+                    <img src="icons/grey-star.svg" alt="Star"> 
+                    <img src="icons/yellow-star.svg" alt="Star">          
+                </figure>            
+            </label>
+            <input type="radio" name="star" value="2" id="star2">        
+            <label for="star3">
+                <figure class="stars-group">                              
+                    <img src="icons/grey-star.svg" alt="Star">
+                    <img src="icons/yellow-star.svg" alt="Star">           
+                </figure>
+            </label>
+            <input type="radio" name="star" value="3" id="star3">        
+            <label for="star4">
+                <figure class="stars-group">                              
+                    <img src="icons/grey-star.svg" alt="Star">  
+                    <img src="icons/yellow-star.svg" alt="Star">         
+                </figure>
+            </label>
+            <input type="radio" name="star" value="4" id="star4">        
+            <label for="star5">
+                <figure class="stars-group">                               
+                    <img src="icons/grey-star.svg" alt="Star"> 
+                    <img src="icons/yellow-star.svg" alt="Star">         
+                </figure>
+            </label>   
+            <input type="radio" name="star" value="5" id="star5">
+        </div>
+        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quo.</p>
     </div>  
 </body>
 </html>

@@ -1,3 +1,45 @@
+:root {
+  --color-blue: #E6E9FC;
+  --color-white: #FFF;
+  --color-black: #161A25;
+  --color-grey: #4f5154;
+}
+
+body {
+  background-color: var(--color-blue);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, 
+p {
+  margin: unset;
+}
+
+.rating-card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 27rem;
+  height: fit-content;
+  margin: auto;
+  padding: 3rem;
+  border-radius: .75rem;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.rating-card > h1 {
+  margin-bottom: 1.75rem;
+  font-size: 1.25rem;
+  color: var(--color-black);
+}
+
 .star-rating {
   display: flex;
   justify-content: center;
@@ -31,7 +73,7 @@
   position: relative;
   display: flex;
   /* Just leaving some space to the right */
-  margin: 0 .5rem 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .stars-group > img {
@@ -41,4 +83,17 @@
 /* Yellow stars */
 .stars-group > img:last-child {
   position: absolute;
+  transition: .5s;
+}
+
+.message {
+  margin-top: 1.75rem;
+  color: var(--color-grey);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .rating-card {
+    max-width: 20rem;
+  }
 }
