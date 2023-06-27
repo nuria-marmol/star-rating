@@ -5,28 +5,25 @@
   width: fit-content;
 }
 
-input[type="radio"] {
-  margin: unset;
-  opacity: 0;
-  transform: scale(3.5);
+/* Hiding first label (with value 0) and all inputs */
+.star-rating > input,
+.star-rating > label:first-child {
+  display: none;
 }
 
-/* Showing all yellow stars when hovering over wrapper */
-/* JS .stars-group:hover > img:last-child {
+/* Hiding yellow stars after checked one */
+.star-rating > input:checked ~ label img:last-child {
+  opacity: 0;
+}
+
+/* Showing all yellow stars when entering the wrapper */
+.star-rating:not(:checked):hover > label img:last-child {
   opacity: 1;
-}*/
-
-/* Not showing next yellow stars */
-/* JS input[type="radio"]:hover ~ label > .stars-group > img:last-child {
-  opacity: 0;
-}*/
-
-input[type="radio"]:checked ~ label > .stars-group > img:last-child {
-  opacity: 0;
 }
 
-label {
-  transform: translateX(70%);
+/* Hiding next yellow stars when hovering over one */
+.star-rating:not(:checked) > label:hover ~ label img:last-child {
+  opacity: 0;
 }
 
 .stars-group {
