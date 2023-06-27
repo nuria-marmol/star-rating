@@ -76,6 +76,11 @@ p {
   margin: 0 1rem 0 0;
 }
 
+/* We don't want the margin right on the last star */
+label:nth-child(11) > .stars-group {
+  margin: unset;
+}
+
 .stars-group > img {
   width: 3rem;
 }
@@ -94,6 +99,11 @@ p {
 /* Mobile */
 @media screen and (max-width: 600px) {
   .rating-card {
-    max-width: 20rem;
+    max-width: 18rem;
+    box-sizing: border-box;
+  }
+
+  .stars-group > img {
+    width: 2.5rem;
   }
 }
