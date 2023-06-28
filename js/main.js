@@ -2,6 +2,11 @@ const ratingCard = document.querySelector("#rating-card");
 const allStars = document.querySelectorAll("label img:last-child");
 const message = document.querySelector("#message");
 
+/**
+ * Animating checked star
+ * 
+ * @param {HTMLElement} element A star
+ */
 function animateStar(element) {
     element.animate([
         {   transform: "scale(1)" },
@@ -16,6 +21,13 @@ function animateStar(element) {
     })
 }
 
+/**
+ * Showing a message depending on the number of stars that the user has checked
+ * 
+ * @param {number} number The number of checked stars
+ * @param {string} extraMessage Custom message
+ * @param {number} delay Milliseconds to wait until showing the custom message
+ */
 function showMessage(number, extraMessage, delay) {
     message.textContent = `${number} ${number === 1 ? 'star' : 'stars'}? ${extraMessage}`;
     setTimeout(function() {
@@ -23,8 +35,9 @@ function showMessage(number, extraMessage, delay) {
     }, delay)
 }
 
+// Event
 allStars.forEach(function (star, index) {
-    star.addEventListener("click", function() {        
+    star.addEventListener("click", function() { 
         // For animating only yellow stars
         const starsToAnimate = Array.from(allStars).slice(0, index + 1);
         animateStar(starsToAnimate[0]);
