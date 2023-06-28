@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Star rating</title>
     <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
 </head>
 <body>    
-    <div class="rating-card">
+    <div class="rating-card" id="rating-card">
         <h1>How many stars would you give to your code editor?</h1>
         <div class="star-rating">
             <label for="star0" class="stars-group"></label>     
@@ -48,7 +49,8 @@
             </label>   
             <input type="radio" name="star" value="5" id="star5">
         </div>
-        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, quo.</p>
-    </div>  
+        <!-- This content will not be shown yet -->
+        <p class="message" id="message">No content yet.</p>
+    </div>
 </body>
 </html>

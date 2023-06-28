@@ -94,6 +94,12 @@ label:nth-child(11) > .stars-group {
 .message {
   margin-top: 1.75rem;
   color: var(--color-grey);
+  opacity: 0;
+  transition: 1.25s;
+}
+
+.message--show {
+  opacity: 1;
 }
 
 /* Mobile */
@@ -101,6 +107,10 @@ label:nth-child(11) > .stars-group {
   .rating-card {
     max-width: 18rem;
     box-sizing: border-box;
+  }
+
+  .stars-group {
+    margin-right: .75rem;
   }
 
   .stars-group > img {
