@@ -31,6 +31,9 @@ function animateStar(element, delay) {
  * @param {number} delay Milliseconds to wait before showing the custom message
  */
 function showMessage(number, extraMessage, delay) {
+    // In case the user changes the rating
+    message.classList.remove("message--show");
+    message.textContent = "";
     setTimeout(function() {
         message.textContent = `${number} ${number === 1 ? 'star' : 'stars'}? ${extraMessage}`;
         message.classList.add("message--show");
