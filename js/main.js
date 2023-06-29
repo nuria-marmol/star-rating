@@ -33,7 +33,7 @@ function animateStar(element, delay) {
 function showMessage(number, extraMessage, delay) {
     // In case the user changes the rating
     message.classList.remove("message--show");
-    message.textContent = "";
+    //message.textContent = "";
     setTimeout(function() {
         message.textContent = `${number} ${number === 1 ? 'star' : 'stars'}? ${extraMessage}`;
         message.classList.add("message--show");
@@ -51,7 +51,7 @@ allStars.forEach(function (star, index) {
         switch (starsToAnimate.length) {           
             case 1:
                 // Wait until the animation ends
-                showMessage(starsToAnimate.length, "That's too bad.", 500);
+                showMessage(starsToAnimate.length, "Woah, that's too bad.", 500);
             break;            
             case 2:
                 animateStar(starsToAnimate[1], 200);                
@@ -66,7 +66,7 @@ allStars.forEach(function (star, index) {
                 animateStar(starsToAnimate[1], 200);
                 animateStar(starsToAnimate[2], 400);
                 animateStar(starsToAnimate[3], 600);                
-                showMessage(starsToAnimate.length, "That's nice!", 1100);
+                showMessage(starsToAnimate.length, "Yes, that's so nice!", 1100);
             break;
             case 5:
                 animateStar(starsToAnimate[1], 200);

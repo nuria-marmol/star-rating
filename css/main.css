@@ -95,7 +95,7 @@ label:nth-child(11) > .stars-group {
   margin-top: 1.75rem;
   color: var(--color-grey);
   opacity: 0;
-  transition: 1s;
+  transition: .75s;
 }
 
 .message--show {
