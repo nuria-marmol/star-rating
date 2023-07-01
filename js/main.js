@@ -65,8 +65,8 @@ allStars.forEach(function (star, index) {
             case 4:
                 animateStar(starsToAnimate[1], 200);
                 animateStar(starsToAnimate[2], 400);
-                animateStar(starsToAnimate[3], 600);                
-                showMessage(starsToAnimate.length, "Yes, that's so nice!", 1100);
+                animateStar(starsToAnimate[3], 600);             
+                showMessage(starsToAnimate.length, "Oh yeah, that's so nice!", 1100);
             break;
             case 5:
                 animateStar(starsToAnimate[1], 200);
